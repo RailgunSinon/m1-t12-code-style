@@ -28,14 +28,14 @@ public class DepositCalculator {
     System.out.println(
         "Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
     action = scanner.nextInt();
-    double outDoubleVar = 0;
+    double result = 0;
     if (action == 1) {
-        outDoubleVar = calculateSimplePercent(amount, 0.06, period);
+        result = calculateSimplePercent(amount, 0.06, period);
     } else if (action == 2) {
-        outDoubleVar = calculateComplexPercent(amount, 0.06, period);
+        result = calculateComplexPercent(amount, 0.06, period);
     }
     System.out.println(
-        "Результат вклада: " + amount + " за " + period + " лет превратятся в " + outDoubleVar);
+        "Результат вклада: " + amount + " за " + period + " лет превратятся в " + result);
   }
 
   public static void main(String[] args) {
